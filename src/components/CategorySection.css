@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .category-background {
@@ -14,10 +17,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  background-size: cover !important;
-  background-position: center top !important;
-  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .category-overlay {

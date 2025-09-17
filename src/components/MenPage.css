@@ -1,4 +1,4 @@
-.women-page {
+.men-page {
   min-height: 100vh;
   background: white;
   padding-top: 20px;
@@ -6,7 +6,7 @@
 
 /* Category Section */
 .category-section {
-  padding: 0px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,6 @@
   transform: scale(1.05);
 }
 
-
 .category-label {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
@@ -93,11 +92,11 @@
   text-transform: uppercase;
 }
 
-  /* Product Showcase Section */
-  .product-showcase-section {
-    padding: 60px 80px 120px;
-    background: white;
-  }
+/* Product Showcase Section */
+.product-showcase-section {
+  padding: 60px 80px 120px;
+  background: white;
+}
 
 .product-grid {
   display: grid;
@@ -206,7 +205,7 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .women-page {
+  .men-page {
     padding-top: 80px;
   }
   

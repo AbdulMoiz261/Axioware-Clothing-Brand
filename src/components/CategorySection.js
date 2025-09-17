@@ -8,19 +8,19 @@ const CategorySection = ({ category }) => {
       men: {
         title: 'MEN\'S COLLECTION',
         subtitle: 'Elegant & Modern',
-        image: '/images/men.webp', // You can add specific images later
+        image: '/images/men.png', // You can add specific images later
         description: 'Discover our premium men\'s collection featuring contemporary designs and timeless elegance.'
       },
       women: {
         title: 'WOMEN\'S COLLECTION',
         subtitle: 'Graceful & Sophisticated',
-        image: '/images/women.jpeg', // You can add specific images later
+        image: '/images/women.png', // You can add specific images later
         description: 'Explore our exquisite women\'s collection with intricate designs and luxurious fabrics.'
       },
       kids: {
         title: 'KIDS\' COLLECTION',
         subtitle: 'Playful & Comfortable',
-        image: '/images/kid.webp', // You can add specific images later
+        image: '/images/kid.png', // You can add specific images later
         description: 'Adorable and comfortable clothing for your little ones with vibrant colors and soft materials.'
       }
     };
@@ -39,15 +39,13 @@ const CategorySection = ({ category }) => {
         style={{
           backgroundImage: `url('${categoryData.image}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll'
         }}
       >
         <div className="category-overlay">
           <div className="category-text">
-            <h2 className="category-title">{categoryData.title}</h2>
-            <h3 className="category-subtitle">{categoryData.subtitle}</h3>
-            <p className="category-description">{categoryData.description}</p>
             <button className="category-btn">
               EXPLORE {category.toUpperCase()}
             </button>

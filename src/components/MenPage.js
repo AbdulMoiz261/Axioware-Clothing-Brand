@@ -1,237 +1,238 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './WomenPage.css';
+import './MenPage.css';
 
-const WomenPage = () => {
+const MenPage = () => {
   const navigate = useNavigate();
 
   const handleProductClick = (productId) => {
-    navigate(`/product/women/${productId}`);
+    navigate(`/product/men/${productId}`);
   };
+
   const categories = [
     {
       id: 1,
       name: 'READY TO STITCH',
-      image: '/images/1.webp'
+      image: '/images/m1.webp'
     },
     {
       id: 2,
       name: 'READY TO WEAR',
-      image: '/images/2.webp'
+      image: '/images/m2.webp'
     },
     {
       id: 3,
-      name: 'MID SUMMER',
-      image: '/images/3.webp'
+      name: 'FORMAL COLLECTION',
+      image: '/images/m3.webp'
     },
     {
       id: 4,
-      name: 'CO-ORD SETS',
-      image: '/images/4.webp'
+      name: 'CASUAL WEAR',
+      image: '/images/m4.webp'
     }
   ];
 
   const products = [
     {
       id: 1,
-      category: 'YARN DYED | PRINTED',
-      items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 5,990',
-      image: '/images/1.webp'
+      category: 'COTTON | PRINTED',
+      items: 'RTW | SHIRT',
+      price: 'PKR 2,990',
+      image: '/images/m1.webp'
     },
     {
       id: 2,
-      category: 'LAWN | PRINTED',
-      items: 'RTW | SHIRT',
-      price: 'PKR 1,990',
-      image: '/images/2.webp'
+      category: 'LINEN | SOLID',
+      items: 'RTW | SHIRT & TROUSER',
+      price: 'PKR 4,590',
+      image: '/images/m2.webp'
     },
     {
       id: 3,
-      category: 'CAMBRIC | EMBROIDERED',
-      items: 'RTW | SHIRT, CULOTTE & DUPATTA',
-      price: 'PKR 8,390',
-      image: '/images/3.webp'
+      category: 'COTTON | EMBROIDERED',
+      items: 'RTW | KURTA',
+      price: 'PKR 3,890',
+      image: '/images/m3.webp'
     },
     {
       id: 4,
-      category: 'CAMBRIC | EMBROIDERED',
+      category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 4,190',
-      image: '/images/4.webp'
+      price: 'PKR 3,290',
+      image: '/images/m4.webp'
     },
     {
       id: 5,
-      category: 'LAWN | EMBROIDERED',
-      items: 'RTW | KURTA & PALAZZO',
-      price: 'PKR 6,590',
-      image: '/images/5.webp'
+      category: 'CAMBRIC | EMBROIDERED',
+      items: 'RTW | KURTA & TROUSER',
+      price: 'PKR 5,490',
+      image: '/images/men.webp'
     },
     {
       id: 6,
-      category: 'COTTON | PRINTED',
-      items: 'RTW | DRESS',
-      price: 'PKR 3,290',
-      image: '/images/6.webp'
+      category: 'COTTON | SOLID',
+      items: 'RTW | SHIRT',
+      price: 'PKR 2,190',
+      image: '/images/men.webp'
     },
     {
       id: 7,
       category: 'SILK | EMBROIDERED',
-      items: 'RTW | LEHENGA & CHOLI',
-      price: 'PKR 15,990',
-      image: '/images/7.webp'
+      items: 'RTW | SHERWANI',
+      price: 'PKR 12,990',
+      image: '/images/men.webp'
     },
     {
       id: 8,
       category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 4,590',
-      image: '/images/8.webp'
+      price: 'PKR 3,590',
+      image: '/images/men.webp'
     },
     {
       id: 9,
       category: 'CAMBRIC | EMBROIDERED',
-      items: 'RTW | KURTA & DUPATTA',
-      price: 'PKR 7,290',
-      image: '/images/9.jpg'
+      items: 'RTW | KURTA',
+      price: 'PKR 4,290',
+      image: '/images/men.webp'
     },
     {
       id: 10,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 3,890',
-      image: '/images/10.webp'
+      price: 'PKR 2,890',
+      image: '/images/men.webp'
     },
     {
       id: 11,
       category: 'LAWN | EMBROIDERED',
-      items: 'RTW | DRESS',
-      price: 'PKR 5,490',
-      image: '/images/11.jpg'
+      items: 'RTW | KURTA',
+      price: 'PKR 4,890',
+      image: '/images/men.webp'
     },
     {
       id: 12,
       category: 'SILK | PRINTED',
-      items: 'RTW | KURTA & PALAZZO',
+      items: 'RTW | SHERWANI',
       price: 'PKR 9,990',
-      image: '/images/12.jpg'
+      image: '/images/men.webp'
     },
     {
       id: 13,
       category: 'CAMBRIC | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 4,190',
-      image: '/images/13.jpg'
+      price: 'PKR 3,190',
+      image: '/images/men.webp'
     },
     {
       id: 14,
       category: 'LAWN | EMBROIDERED',
-      items: 'RTW | KURTA & DUPATTA',
-      price: 'PKR 6,890',
-      image: '/images/14.webp'
+      items: 'RTW | KURTA',
+      price: 'PKR 5,290',
+      image: '/images/men.webp'
     },
     {
       id: 15,
       category: 'COTTON | PRINTED',
-      items: 'RTW | DRESS',
-      price: 'PKR 2,990',
-      image: '/images/15.webp'
+      items: 'RTW | SHIRT',
+      price: 'PKR 2,390',
+      image: '/images/men.webp'
     },
     {
       id: 16,
       category: 'SILK | EMBROIDERED',
-      items: 'RTW | LEHENGA',
-      price: 'PKR 12,990',
-      image: '/images/16.webp'
+      items: 'RTW | SHERWANI',
+      price: 'PKR 11,990',
+      image: '/images/men.webp'
     },
     {
       id: 17,
       category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 3,590',
-      image: '/images/17.webp'
+      price: 'PKR 3,290',
+      image: '/images/men.webp'
     },
     {
       id: 18,
       category: 'CAMBRIC | EMBROIDERED',
-      items: 'RTW | KURTA & PALAZZO',
-      price: 'PKR 7,890',
-      image: '/images/18.jpg'
+      items: 'RTW | KURTA & TROUSER',
+      price: 'PKR 6,890',
+      image: '/images/men.webp'
     },
     {
       id: 19,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 3,290',
-      image: '/images/19.webp'
+      price: 'PKR 2,790',
+      image: '/images/men.webp'
     },
     {
       id: 20,
       category: 'LAWN | EMBROIDERED',
-      items: 'RTW | DRESS',
-      price: 'PKR 5,190',
-      image: '/images/20.webp'
+      items: 'RTW | KURTA',
+      price: 'PKR 4,590',
+      image: '/images/men.webp'
     },
     {
       id: 21,
       category: 'SILK | PRINTED',
-      items: 'RTW | KURTA & DUPATTA',
+      items: 'RTW | SHERWANI',
       price: 'PKR 8,990',
-      image: '/images/21.webp'
+      image: '/images/men.webp'
     },
     {
       id: 22,
       category: 'CAMBRIC | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 4,590',
-      image: '/images/22.webp'
+      price: 'PKR 3,490',
+      image: '/images/men.webp'
     },
     {
       id: 23,
       category: 'LAWN | EMBROIDERED',
-      items: 'RTW | KURTA & PALAZZO',
-      price: 'PKR 6,290',
-      image: '/images/23.jpg'
+      items: 'RTW | KURTA & TROUSER',
+      price: 'PKR 5,690',
+      image: '/images/men.webp'
     },
     {
       id: 24,
       category: 'COTTON | PRINTED',
-      items: 'RTW | DRESS',
-      price: 'PKR 2,790',
-      image: '/images/24.jpg'
+      items: 'RTW | SHIRT',
+      price: 'PKR 2,190',
+      image: '/images/men.webp'
     },
     {
       id: 25,
       category: 'SILK | EMBROIDERED',
-      items: 'RTW | LEHENGA & CHOLI',
-      price: 'PKR 14,990',
-      image: '/images/25.jpg'
+      items: 'RTW | SHERWANI',
+      price: 'PKR 13,990',
+      image: '/images/men.webp'
     },
     {
       id: 26,
       category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 4,190',
-      image: '/images/26.webp'
+      price: 'PKR 3,890',
+      image: '/images/men.webp'
     },
     {
       id: 27,
       category: 'CAMBRIC | EMBROIDERED',
-      items: 'RTW | KURTA & DUPATTA',
-      price: 'PKR 7,590',
-      image: '/images/27.jpeg'
+      items: 'RTW | KURTA',
+      price: 'PKR 5,190',
+      image: '/images/men.webp'
     },
     {
       id: 28,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 3,490',
-      image: '/images/28.jpg'
+      price: 'PKR 2,990',
+      image: '/images/men.webp'
     }
   ];
 
   return (
-    <div className="women-page">
+    <div className="men-page">
       {/* Category Section */}
       <div className="category-section">
         <div className="category-wrapper">
@@ -246,7 +247,7 @@ const WomenPage = () => {
             ))}
           </div>
           
-          <h1 className="category-title">WOMEN</h1>
+          <h1 className="category-title">MEN</h1>
           
           <div className="category-grid-right">
             {categories.slice(2, 4).map((category) => (
@@ -297,4 +298,4 @@ const WomenPage = () => {
   );
 };
 
-export default WomenPage;
+export default MenPage;
