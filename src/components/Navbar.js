@@ -63,8 +63,12 @@ const Navbar = ({ onNavigate }) => {
         
         <div className="navbar-center">
           <div className="logo">
-            <span className="logo-icon">✚</span>
-            <span className="logo-text">axioware</span>
+            <img 
+              src="/images/axiowarelogo.png" 
+              alt="Axioware Logo" 
+              className="logo-image"
+            />
+            <span className="logo-text">AXIOWARE</span>
           </div>
         </div>
         

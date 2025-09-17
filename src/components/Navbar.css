@@ -93,7 +93,24 @@
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-image {
+  height: 75px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
   color: white;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -103,19 +120,8 @@
   transition: all 0.3s ease;
 }
 
-.logo:hover {
-  transform: translateY(-1px);
-}
-
-.logo-icon {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
-  font-weight: 300;
-  transition: all 0.3s ease;
-}
-
-.logo:hover .logo-icon {
-  color: white;
+.logo:hover .logo-image {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .icon-btn {
@@ -177,7 +183,12 @@
     padding: 12px 0;
   }
   
-  .logo {
+  .logo-image {
+    height: 55px;
+    max-width: 150px;
+  }
+  
+  .logo-text {
     font-size: 26px;
     letter-spacing: 2px;
   }
@@ -213,7 +224,12 @@
     padding: 10px 0;
   }
   
-  .logo {
+  .logo-image {
+    height: 45px;
+    max-width: 120px;
+  }
+  
+  .logo-text {
     font-size: 22px;
     letter-spacing: 1.5px;
   }
