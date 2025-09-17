@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  position: relative;
+}
+
+/* Global styles for smooth scrolling and transitions */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper stacking context */
+.App > * {
+  position: relative;
+  z-index: 1;
+}
