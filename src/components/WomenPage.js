@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './WomenPage.css';
 
 const WomenPage = () => {
+  const navigate = useNavigate();
+
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
   const categories = [
     {
       id: 1,
@@ -259,7 +265,11 @@ const WomenPage = () => {
       <div className="product-showcase-section">
         <div className="product-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
+            <div 
+              key={product.id} 
+              className="product-card"
+              onClick={() => handleProductClick(product.id)}
+            >
               <div className="product-image">
                 <img src={product.image} alt="Product" />
                 <div className="product-overlay">
@@ -267,7 +277,13 @@ const WomenPage = () => {
                   <div className="product-items">{product.items}</div>
                   <div className="product-price">{product.price}</div>
                 </div>
-                <button className="add-to-cart">
+                <button 
+                  className="add-to-cart"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    // Add to cart functionality can be added here
+                  }}
+                >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 5v14M5 12h14"/>
                   </svg>

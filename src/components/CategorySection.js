@@ -20,7 +20,7 @@ const CategorySection = ({ category }) => {
       kids: {
         title: 'KIDS\' COLLECTION',
         subtitle: 'Playful & Comfortable',
-        image: '/images/kids.jpg', // You can add specific images later
+        image: '/images/kid.webp', // You can add specific images later
         description: 'Adorable and comfortable clothing for your little ones with vibrant colors and soft materials.'
       }
     };
