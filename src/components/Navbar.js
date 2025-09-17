@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,10 +14,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (page) => {
+    if (onNavigate) {
+      onNavigate(page);
+    } else {
+      const element = document.getElementById(page);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -27,31 +31,31 @@ const Navbar = () => {
         <div className="navbar-left">
           <button 
             className="nav-link" 
-            onClick={() => scrollToSection('home')}
+            onClick={() => handleNavigation('home')}
           >
             HOME
           </button>
           <button 
             className="nav-link" 
-            onClick={() => scrollToSection('men')}
+            onClick={() => handleNavigation('men')}
           >
             MEN
           </button>
           <button 
             className="nav-link" 
-            onClick={() => scrollToSection('women')}
+            onClick={() => handleNavigation('women')}
           >
             WOMEN
           </button>
           <button 
             className="nav-link" 
-            onClick={() => scrollToSection('kids')}
+            onClick={() => handleNavigation('kids')}
           >
             KIDS
           </button>
           <button 
             className="nav-link" 
-            onClick={() => scrollToSection('sale')}
+            onClick={() => handleNavigation('sale')}
           >
             SALE
           </button>
