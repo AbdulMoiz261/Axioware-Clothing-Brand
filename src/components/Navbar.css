@@ -112,7 +112,7 @@
 
 .logo-text {
   color: #0A2A43; /* fallback if gradient not supported */
-  background: linear-gradient(180deg, #0A2A43, #065A82, #00C4CC);
+  background: linear-gradient(18git pu0deg, #0A2A43, #065A82, #00C4CC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Playfair Display', serif;
