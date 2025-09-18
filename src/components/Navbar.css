@@ -127,47 +127,6 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.icon-btn {
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-}
-
-.icon-btn:hover {
-  color: white;
-  transform: translateY(-1px);
-}
-
-.icon-btn svg {
-  width: 24px;
-  height: 24px;
-  stroke-width: 1.5;
-}
-
-.cart-btn {
-  position: relative;
-}
-
-.cart-dot {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.9;
-}
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
