@@ -202,28 +202,47 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .hero-background {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
   .hero-content {
-    left: 80px;
-    right: 40px;
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
     max-width: none;
+    width: 100%;
+    text-align: center;
   }
   
   .hero-title {
-    font-size: 4rem;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
   }
   
   .hero-buttons {
     flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
+    gap: 15px;
+    align-items: center;
   }
   
   .demo-btn,
   .contact-btn {
-    padding: 18px 36px;
+    padding: 16px 32px;
     font-size: 16px;
     width: 100%;
+    max-width: 280px;
     justify-content: center;
   }
   
@@ -231,13 +250,15 @@
     position: static;
     transform: none;
     width: 100%;
-    height: 600px;
-    margin-top: 40px;
-    display: flex;
+    height: auto;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 35px;
+    gap: 20px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   
   .card {
@@ -245,54 +266,61 @@
     transform: none !important;
   }
   
+  /* All cards are now portrait on mobile */
+  
+  /* Show only portrait cards */
   .card-portrait {
-    width: 260px;
-    height: 280px;
+    width: 140px;
+    height: 180px;
   }
   
-  .card-landscape {
-    width: 280px;
-    height: 190px;
+  /* Override positioning for mobile */
+  .card-top,
+  .card-left,
+  .card-right,
+  .card-bottom {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: auto;
-    min-height: 100vh;
+    padding: 30px 15px;
   }
   
-  .hero-content {
-    left: 60px;
-    right: 24px;
+  .hero-background {
+    gap: 60px;
+    margin: 49px 20px 20px 20px;
   }
   
   .hero-title {
-    font-size: 2.8rem;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
   }
   
   .demo-btn,
   .contact-btn {
-    padding: 16px 32px;
+    padding: 14px 28px;
     font-size: 15px;
+    max-width: 260px;
   }
   
   .hero-cards {
-    height: 500px;
-    margin-top: 30px;
-    gap: 30px;
+    gap: 15px;
+    max-width: 240px;
   }
   
   .card-portrait {
-    width: 220px;
-    height: 240px;
+    width: 110px;
+    height: 150px;
   }
   
-  .card-landscape {
-    width: 240px;
-    height: 160px;
-  }
+  /* All cards are now portrait on small mobile too */
 }
 
 /* Video Section */
