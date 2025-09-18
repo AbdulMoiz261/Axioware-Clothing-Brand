@@ -68,6 +68,36 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Image Comparison Section */}
+      <section className="comparison-section">
+        <div className="comparison-container">
+          <h2 className="comparison-title">Virtual Try-On Results</h2>
+          <p className="comparison-subtitle">Experience the power of our 3D fashion technology</p>
+          
+          <div className="image-comparison-grid">
+            <div className="input-images">
+              <div className="input-image-container">
+                <div className="image-label">Original Image</div>
+                <div className="comparison-image input-image-1" style={{backgroundImage: "url('/images/input-image-1.jpg')"}}>
+                </div>
+              </div>
+              
+              <div className="input-image-container">
+                <div className="image-label">Garment Selection</div>
+                <div className="comparison-image input-image-2" style={{backgroundImage: "url('/images/input-image-2.png')"}}>
+                </div>
+              </div>
+            </div>
+            
+            <div className="generated-image-container">
+              <div className="image-label">Generated Result</div>
+              <div className="comparison-image generated-image" style={{backgroundImage: "url('/images/generated-image.webp')"}}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="video" className="video-section">
         <div className="video-container">
           <video 
