@@ -210,7 +210,7 @@
   }
   
   .category-section {
-    padding: 40px 20px;
+    padding: 0px 0px;
   }
   
   .category-wrapper {
@@ -271,7 +271,7 @@
 
 @media (max-width: 480px) {
   .category-section {
-    padding: 30px 15px;
+    padding: 0px 0px;
   }
   
   .category-title {

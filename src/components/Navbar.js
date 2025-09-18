@@ -3,6 +3,7 @@ import './Navbar.css';
 
 const Navbar = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,7 @@ const Navbar = ({ onNavigate }) => {
   }, []);
 
   const handleNavigation = (page) => {
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     if (onNavigate) {
       onNavigate(page);
     } else {
@@ -49,17 +51,22 @@ const Navbar = ({ onNavigate }) => {
           </button>
           <button 
             className="nav-link" 
-            onClick={() => handleNavigation('kids')}
-          >
-            KIDS
-          </button>
-          <button 
-            className="nav-link" 
             onClick={() => handleNavigation('sale')}
           >
             SALE
           </button>
         </div>
+
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+        </button>
         
         <div className="navbar-center">
           <div className="logo">
@@ -92,6 +99,36 @@ const Navbar = ({ onNavigate }) => {
               <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"/>
             </svg>
             <span className="cart-dot"></span>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-content">
+          <button 
+            className="mobile-nav-link" 
+            onClick={() => handleNavigation('home')}
+          >
+            HOME
+          </button>
+          <button 
+            className="mobile-nav-link" 
+            onClick={() => handleNavigation('men')}
+          >
+            MEN
+          </button>
+          <button 
+            className="mobile-nav-link" 
+            onClick={() => handleNavigation('women')}
+          >
+            WOMEN
+          </button>
+          <button 
+            className="mobile-nav-link" 
+            onClick={() => handleNavigation('sale')}
+          >
+            SALE
           </button>
         </div>
       </div>

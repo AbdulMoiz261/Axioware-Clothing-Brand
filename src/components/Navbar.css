@@ -112,7 +112,7 @@
 
 .logo-text {
   color: #0A2A43; /* fallback if gradient not supported */
-  background: linear-gradient(18git pu0deg, #0A2A43, #065A82, #00C4CC);
+  background: linear-gradient(180deg, #0A2A43, #065A82, #00C4CC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Playfair Display', serif;
@@ -169,6 +169,94 @@
   opacity: 0.9;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background: white;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.active:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 15px 0;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link:hover {
+  color: #667eea;
+  padding-left: 10px;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .navbar-container {
@@ -177,7 +265,11 @@
   }
   
   .navbar-left {
-    gap: 30px;
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
   }
   
   .nav-link {
@@ -218,7 +310,11 @@
   }
   
   .navbar-left {
-    gap: 20px;
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
   }
   
   .nav-link {

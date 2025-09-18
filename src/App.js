@@ -8,6 +8,7 @@ import WomenPage from './components/WomenPage';
 import MenPage from './components/MenPage';
 import MenProductDetail from './components/MenProductDetail';
 import WomenProductDetail from './components/WomenProductDetail';
+import Footer from './components/Footer';
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -23,17 +24,10 @@ function AppContent() {
       <HeroSection />
       <CategorySection category="Men" />
       <CategorySection category="Women" />
-      <CategorySection category="Kids" />
     </div>
   );
 
   const MenPageComponent = () => <MenPage />;
-
-  const KidsPage = () => (
-    <div>
-      <CategorySection category="Kids" />
-    </div>
-  );
 
   const SalePage = () => (
     <div>
@@ -48,11 +42,11 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/women" element={<WomenPage />} />
         <Route path="/men" element={<MenPageComponent />} />
-        <Route path="/kids" element={<KidsPage />} />
         <Route path="/sale" element={<SalePage />} />
         <Route path="/product/men/:id" element={<MenProductDetail />} />
         <Route path="/product/women/:id" element={<WomenProductDetail />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
