@@ -9,9 +9,9 @@ const CategorySection = ({ category }) => {
         title: 'MEN\'S COLLECTION',
         subtitle: 'Elegant & Modern',
         image: '/images/men.png',
-        tabletImage: '/images/m1.webp',
-        mobileImage: '/images/m1.webp',
-        description: 'Discover our premium men\'s collection featuring contemporary designs and timeless elegance.'
+        tabletImage: '/images/men.png',
+        mobileImage: '/images/men.png',
+    description: 'Discover our premium men\'s collection featuring contemporary designs and timeless elegance.'
       },
       women: {
         title: 'WOMEN\'S COLLECTION',

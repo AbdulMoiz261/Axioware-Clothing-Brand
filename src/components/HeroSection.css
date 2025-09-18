@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #000000;
 }
 
 .hero-background {
@@ -14,112 +15,282 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  background-size: cover !important;
-  background-position: center top !important;
-  background-repeat: no-repeat !important;
+  justify-content: flex-start;
+  background-color: #000000;
 }
 
-.hero-overlay {
+.hero-content {
   position: absolute;
-  bottom: 60px;
-  left: 60px;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
   z-index: 10;
+  max-width: 800px;
   text-align: left;
 }
 
-.hero-text {
-  color: #333;
-}
-
 .hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 6rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  letter-spacing: -0.02em;
+  margin-bottom: 50px;
   line-height: 1.1;
-  color: #2c2c2c;
+  color: #ffffff;
+  text-align: left;
 }
 
-.shop-now-btn {
-  background: transparent;
-  border: 2px solid #333;
-  color: #333;
-  padding: 15px 40px;
+.title-line {
+  display: block;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.demo-btn {
+  background: #ffffff;
+  border: none;
+  color: #000000;
+  padding: 20px 40px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position: relative;
   overflow: hidden;
 }
 
-.shop-now-btn::before {
+.demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.demo-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Hero Cards Layout */
+.hero-cards {
+  position: absolute;
+  top: 50%;
+  right: 240px;
+  transform: translateY(-50%);
+  width: 580px;
+  height: 650px;
+  z-index: 5;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.card {
+  position: absolute;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 150%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  display: block;
+  border-radius: 16px;
+  position: relative;
+}
+
+.card-image::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: #333;
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.shop-now-btn:hover {
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.shop-now-btn:hover::before {
   left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover .card-image::before {
+  opacity: 1;
+}
+
+/* Portrait Cards */
+.card-portrait {
+  width: 280px;
+  height: 300px;
+}
+
+/* Landscape Cards */
+.card-landscape {
+  width: 300px;
+  height: 200px;
+}
+
+/* Card Positioning */
+.card-top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.card-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.card-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .hero-overlay {
-    bottom: 30px;
-    left: 30px;
+  .hero-content {
+    left: 60px;
+    right: 40px;
+    max-width: none;
   }
   
   .hero-title {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 40px;
   }
   
-  .shop-now-btn {
-    padding: 12px 30px;
-    font-size: 12px;
-    letter-spacing: 1px;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .demo-btn,
+  .contact-btn {
+    padding: 18px 36px;
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-cards {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card {
+    position: relative;
+    transform: none !important;
+  }
+  
+  .card-portrait {
+    width: 220px;
+    height: 240px;
+  }
+  
+  .card-landscape {
+    width: 240px;
+    height: 160px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 80vh;
+    height: auto;
+    min-height: 100vh;
   }
   
-  .hero-overlay {
-    bottom: 20px;
-    left: 20px;
+  .hero-content {
+    left: 40px;
+    right: 24px;
   }
   
   .hero-title {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
   }
   
-  .shop-now-btn {
-    padding: 10px 25px;
-    font-size: 11px;
+  .demo-btn,
+  .contact-btn {
+    padding: 16px 32px;
+    font-size: 15px;
+  }
+  
+  .hero-cards {
+    height: 420px;
+    margin-top: 30px;
+    gap: 25px;
+  }
+  
+  .card-portrait {
+    width: 190px;
+    height: 210px;
+  }
+  
+  .card-landscape {
+    width: 210px;
+    height: 140px;
   }
 }
