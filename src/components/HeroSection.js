@@ -25,27 +25,6 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="hero-cards">
-            <div className="card card-portrait card-top">
-              <div className="card-image" style={{backgroundImage: "url('/images/1.webp')"}}>
-              </div>
-            </div>
-            
-            <div className="card card-portrait card-left">
-              <div className="card-image" style={{backgroundImage: "url('/images/m4.webp')"}}>
-              </div>
-            </div>
-            
-            <div className="card card-portrait card-right">
-              <div className="card-image" style={{backgroundImage: "url('/images/3.webp')"}}>
-              </div>
-            </div>
-            
-          <div className="card card-portrait card-bottom">
-            <div className="card-image" style={{backgroundImage: "url('/images/16.webp')"}}>
-            </div>
-          </div>
-          </div>
         </div>
       </section>
 
