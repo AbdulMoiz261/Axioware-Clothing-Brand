@@ -6,6 +6,25 @@ const HeroSection = () => {
     <>
       <section id="home" className="hero-section">
         <div className="hero-background">
+          {/* Professional Background Animation */}
+          <div className="animation-container">
+            <div className="grid-lines"></div>
+            <div className="subtle-glow glow-1"></div>
+            <div className="subtle-glow glow-2"></div>
+            <div className="floating-particles">
+              <div className="particle particle-1"></div>
+              <div className="particle particle-2"></div>
+              <div className="particle particle-3"></div>
+              <div className="particle particle-4"></div>
+              <div className="particle particle-5"></div>
+            </div>
+            <div className="geometric-shapes">
+              <div className="shape shape-1"></div>
+              <div className="shape shape-2"></div>
+              <div className="shape shape-3"></div>
+            </div>
+          </div>
+          
           <div className="hero-content">
             <h1 className="hero-title">
               <span className="title-line">Virtual Try On & 3D Solutions for Fashion</span>
@@ -32,9 +51,9 @@ const HeroSection = () => {
             </div>
             
           <div className="card card-portrait card-left">
-            <div className="card-image" style={{backgroundImage: "url('/images/m4.webp')"}}>
+              <div className="card-image" style={{backgroundImage: "url('/images/m4.webp')"}}>
+              </div>
             </div>
-          </div>
             
             <div className="card card-portrait card-right">
               <div className="card-image" style={{backgroundImage: "url('/images/3.webp')"}}>

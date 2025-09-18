@@ -234,6 +234,25 @@ const WomenPage = () => {
     <div className="women-page">
       {/* Category Section */}
       <div className="category-section">
+        {/* Professional Background Animation */}
+        <div className="animation-container">
+          <div className="grid-lines"></div>
+          <div className="subtle-glow glow-1"></div>
+          <div className="subtle-glow glow-2"></div>
+          <div className="floating-particles">
+            <div className="particle particle-1"></div>
+            <div className="particle particle-2"></div>
+            <div className="particle particle-3"></div>
+            <div className="particle particle-4"></div>
+            <div className="particle particle-5"></div>
+          </div>
+          <div className="geometric-shapes">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
+          </div>
+        </div>
+        
         <div className="category-wrapper">
           <div className="category-grid-left">
             {categories.slice(0, 2).map((category) => (

@@ -6,11 +6,208 @@
 
 /* Category Section */
 .category-section {
-  padding: 0px 0;
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Professional Background Animation */
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Enhanced Grid Lines */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-move 25s linear infinite;
+}
+
+/* Enhanced Glow Effects */
+.subtle-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 50%, transparent 80%);
+  animation: gentle-pulse 6s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.glow-1 {
+  width: 400px;
+  height: 400px;
+  top: 15%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.glow-2 {
+  width: 350px;
+  height: 350px;
+  top: 55%;
+  right: 10%;
+  animation-delay: -3s;
+}
+
+/* Floating Particles */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float-particle 12s infinite linear;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 40%;
+  left: 80%;
+  animation-delay: -2s;
+}
+
+.particle-3 {
+  top: 70%;
+  left: 25%;
+  animation-delay: -4s;
+}
+
+.particle-4 {
+  top: 30%;
+  left: 60%;
+  animation-delay: -6s;
+}
+
+.particle-5 {
+  top: 80%;
+  left: 70%;
+  animation-delay: -8s;
+}
+
+/* Geometric Shapes */
+.geometric-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.shape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: rotate-shape 15s infinite linear;
+}
+
+.shape-1 {
+  width: 30px;
+  height: 30px;
+  top: 25%;
+  right: 20%;
+  border-radius: 4px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid rgba(255, 255, 255, 0.15);
+  top: 65%;
+  left: 80%;
+  border: none;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 25px;
+  height: 25px;
+  top: 45%;
+  left: 85%;
+  border-radius: 50%;
+  animation-delay: -10s;
+}
+
+/* Enhanced Animation Keyframes */
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-15px) translateX(-20px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-40px) translateX(10px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rotate-shape {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.6;
+  }
 }
 
 .category-wrapper {
@@ -26,9 +223,11 @@
   font-family: 'Playfair Display', serif;
   font-size: 72px;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   letter-spacing: 3px;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .category-grid-left {
@@ -49,6 +248,8 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 10;
 }
 
 .category-item:hover {
@@ -86,7 +287,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   text-align: center;
   letter-spacing: 0.5px;
   text-transform: uppercase;
