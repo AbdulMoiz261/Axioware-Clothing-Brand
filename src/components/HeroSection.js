@@ -99,8 +99,44 @@ const HeroSection = () => {
       {/* Animated Comparison Section */}
       <section className="comparison-section">
         <div className="comparison-container">
-          <h2 className="comparison-title">Virtual Try-On Demo</h2>
-          <p className="comparison-subtitle">Watch our AI process your images in real-time</p>
+          <div className="section-header">
+            <div className="section-badge">AI-Powered Technology</div>
+            <h2 className="comparison-title">Experience Virtual Try-On</h2>
+            <p className="comparison-subtitle">
+              Our advanced AI technology analyzes your body measurements and garment specifications to create realistic virtual try-on experiences. 
+              See how our 3D fashion technology transforms your shopping experience.
+            </p>
+          </div>
+          
+          <div className="tech-features">
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h4>AI Analysis</h4>
+              <p>Advanced computer vision analyzes body structure and garment fit</p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h4>Real-time Processing</h4>
+              <p>Instant generation with high-quality results in seconds</p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h4>Photorealistic Results</h4>
+              <p>Industry-leading quality with natural lighting and fabric textures</p>
+            </div>
+          </div>
           
           {/* Control Button */}
           <div className="animation-controls">
@@ -176,6 +212,30 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+          
+          {showGenerated && (
+            <div className="results-summary">
+              <div className="summary-content">
+                <h3>Generation Complete!</h3>
+                <p>Our AI has successfully processed your images and generated a realistic virtual try-on result. 
+                   The technology analyzed body measurements, garment specifications, and lighting conditions to create this photorealistic output.</p>
+                <div className="summary-stats">
+                  <div className="stat-item">
+                    <span className="stat-number">99.8%</span>
+                    <span className="stat-label">Accuracy</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-number">2.3s</span>
+                    <span className="stat-label">Processing Time</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-number">4K</span>
+                    <span className="stat-label">Resolution</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

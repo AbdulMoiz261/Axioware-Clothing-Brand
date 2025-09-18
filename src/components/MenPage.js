@@ -13,22 +13,22 @@ const MenPage = () => {
     {
       id: 1,
       name: 'READY TO STITCH',
-      image: '/images/m1.webp'
+      image: '/images/m4.webp'
     },
     {
       id: 2,
       name: 'READY TO WEAR',
-      image: '/images/m2.webp'
+      image: '/images/m5.webp'
     },
     {
       id: 3,
       name: 'FORMAL COLLECTION',
-      image: '/images/m3.webp'
+      image: '/images/m1.webp'
     },
     {
       id: 4,
       name: 'CASUAL WEAR',
-      image: '/images/m4.webp'
+      image: '/images/m2.webp'
     }
   ];
 
@@ -66,28 +66,28 @@ const MenPage = () => {
       category: 'CAMBRIC | EMBROIDERED',
       items: 'RTW | KURTA & TROUSER',
       price: 'PKR 5,490',
-      image: '/images/men.webp'
+      image: '/images/m5.webp'
     },
     {
       id: 6,
       category: 'COTTON | SOLID',
       items: 'RTW | SHIRT',
       price: 'PKR 2,190',
-      image: '/images/men.webp'
+      image: '/images/m6.webp'
     },
     {
       id: 7,
       category: 'SILK | EMBROIDERED',
       items: 'RTW | SHERWANI',
       price: 'PKR 12,990',
-      image: '/images/men.webp'
+      image: '/images/m7.webp'
     },
     {
       id: 8,
       category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
       price: 'PKR 3,590',
-      image: '/images/men.webp'
+      image: '/images/m8.webp'
     },
     {
       id: 9,
