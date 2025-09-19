@@ -172,62 +172,6 @@ const MenPage = () => {
       items: 'RTW | KURTA',
       price: 'PKR 4,590',
       image: '/images/m20.webp'
-    },
-    {
-      id: 21,
-      category: 'SILK | PRINTED',
-      items: 'RTW | SHERWANI',
-      price: 'PKR 8,990',
-      image: '/images/men.webp'
-    },
-    {
-      id: 22,
-      category: 'CAMBRIC | PRINTED',
-      items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 3,490',
-      image: '/images/men.webp'
-    },
-    {
-      id: 23,
-      category: 'LAWN | EMBROIDERED',
-      items: 'RTW | KURTA & TROUSER',
-      price: 'PKR 5,690',
-      image: '/images/men.webp'
-    },
-    {
-      id: 24,
-      category: 'COTTON | PRINTED',
-      items: 'RTW | SHIRT',
-      price: 'PKR 2,190',
-      image: '/images/men.webp'
-    },
-    {
-      id: 25,
-      category: 'SILK | EMBROIDERED',
-      items: 'RTW | SHERWANI',
-      price: 'PKR 13,990',
-      image: '/images/men.webp'
-    },
-    {
-      id: 26,
-      category: 'LAWN | PRINTED',
-      items: 'RTW | SHIRT & TROUSER',
-      price: 'PKR 3,890',
-      image: '/images/men.webp'
-    },
-    {
-      id: 27,
-      category: 'CAMBRIC | EMBROIDERED',
-      items: 'RTW | KURTA',
-      price: 'PKR 5,190',
-      image: '/images/men.webp'
-    },
-    {
-      id: 28,
-      category: 'COTTON | PRINTED',
-      items: 'RTW | SHIRT & CULOTTE',
-      price: 'PKR 2,990',
-      image: '/images/men.webp'
     }
   ];
 
