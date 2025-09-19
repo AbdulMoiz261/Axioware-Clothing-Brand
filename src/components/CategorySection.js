@@ -1,5 +1,7 @@
 import React from 'react';
 import './CategorySection.css';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 const CategorySection = ({ category }) => {
 
@@ -76,6 +78,8 @@ const CategorySection = ({ category }) => {
           </div>
         </div>
       </div>
+      <ContactUs />
+      <Footer />
     </section>
   );
 };

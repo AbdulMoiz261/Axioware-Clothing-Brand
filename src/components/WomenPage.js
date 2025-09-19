@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './WomenPage.css';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 const WomenPage = () => {
   const navigate = useNavigate();
@@ -312,6 +314,8 @@ const WomenPage = () => {
           ))}
         </div>
       </div>
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

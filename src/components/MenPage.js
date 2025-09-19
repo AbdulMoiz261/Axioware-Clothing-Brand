@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MenPage.css';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 const MenPage = () => {
   const navigate = useNavigate();
@@ -257,6 +259,8 @@ const MenPage = () => {
           ))}
         </div>
       </div>
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

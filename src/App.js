@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import CategorySection from './components/CategorySection';
 import WomenPage from './components/WomenPage';
 import MenPage from './components/MenPage';
 import MenProductDetail from './components/MenProductDetail';
 import WomenProductDetail from './components/WomenProductDetail';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,16 +22,13 @@ function AppContent() {
   const HomePage = () => (
     <div>
       <HeroSection />
+      <ContactUs />
+      <Footer />
     </div>
   );
 
   const MenPageComponent = () => <MenPage />;
 
-  const SalePage = () => (
-    <div>
-      <CategorySection category="Sale" />
-    </div>
-  );
 
   return (
     <div className="App">
@@ -39,7 +37,6 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/women" element={<WomenPage />} />
         <Route path="/men" element={<MenPageComponent />} />
-        <Route path="/sale" element={<SalePage />} />
         <Route path="/product/men/:id" element={<MenProductDetail />} />
         <Route path="/product/women/:id" element={<WomenProductDetail />} />
       </Routes>

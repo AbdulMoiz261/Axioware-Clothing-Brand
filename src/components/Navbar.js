@@ -49,12 +49,6 @@ const Navbar = ({ onNavigate }) => {
           >
             WOMEN
           </button>
-          <button 
-            className="nav-link" 
-            onClick={() => handleNavigation('sale')}
-          >
-            SALE
-          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -101,12 +95,6 @@ const Navbar = ({ onNavigate }) => {
             onClick={() => handleNavigation('women')}
           >
             WOMEN
-          </button>
-          <button 
-            className="mobile-nav-link" 
-            onClick={() => handleNavigation('sale')}
-          >
-            SALE
           </button>
         </div>
       </div>

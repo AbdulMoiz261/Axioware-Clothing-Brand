@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './ProductDetail.css';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 const WomenProductDetail = () => {
   const { id } = useParams();
@@ -464,6 +466,8 @@ const WomenProductDetail = () => {
           </div>
         </div>
       </div>
+      <ContactUs />
+      <Footer />
     </div>
   );
 };
