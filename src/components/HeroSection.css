@@ -217,11 +217,11 @@
 .hero-content {
   position: absolute;
   top: 50%;
-  left: 120px;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
   max-width: 800px;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-title {
@@ -232,7 +232,7 @@
   margin-bottom: 50px;
   line-height: 1.1;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 
 .title-line {
@@ -243,6 +243,7 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: center;
 }
 
 .demo-btn {
@@ -298,98 +299,6 @@
   fill: currentColor;
 }
 
-/* Hero Cards Layout */
-.hero-cards {
-  position: absolute;
-  top: 50%;
-  right: 240px;
-  transform: translateY(-50%);
-  width: 580px;
-  height: 650px;
-  z-index: 10;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
-}
-
-.card {
-  position: absolute;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-.card:hover {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 8px 25px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.card-image {
-  width: 100%;
-  height: 150%;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
-  display: block;
-  border-radius: 16px;
-  position: relative;
-}
-
-.card-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
-  border-radius: 16px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.card:hover .card-image::before {
-  opacity: 1;
-}
-
-/* Portrait Cards */
-.card-portrait {
-  width: 280px;
-  height: 300px;
-}
-
-/* All cards are now portrait */
-
-/* Card Positioning */
-.card-top {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.card-left {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.card-right {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.card-bottom {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
@@ -436,50 +345,6 @@
     justify-content: center;
   }
   
-  .hero-cards {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    width: 400px;
-    height: 500px;
-    margin: 40px auto 0;
-    display: block;
-  }
-  
-  .card {
-    position: absolute;
-  }
-  
-  .card-portrait {
-    width: 180px;
-    height: 240px;
-  }
-  
-  /* Maintain desktop positioning on mobile */
-  .card-top {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .card-left {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  
-  .card-right {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-  
-  .card-bottom {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 @media (max-width: 480px) {
@@ -504,41 +369,6 @@
     width: 260px;
   }
   
-  .hero-cards {
-    width: 320px;
-    height: 400px;
-    margin: 30px auto 0;
-  }
-  
-  .card-portrait {
-    width: 140px;
-    height: 190px;
-  }
-  
-  /* Maintain desktop positioning on small mobile */
-  .card-top {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .card-left {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  
-  .card-right {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-  
-  .card-bottom {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 /* Image Comparison Section */
@@ -1312,7 +1142,7 @@
 /* Men's Horizontal Scrolling Images Section */
 .mens-scroll-section {
   width: 100%;
-  height: 100vh;
+    height: 100vh;
   background: #000000;
   overflow: hidden;
   position: relative;
@@ -1351,8 +1181,8 @@
 }
 
 .mens-scroll-container {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -1422,69 +1252,3 @@
   }
 }
 
-/* Video Section */
-.video-section {
-  width:99.2vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-  padding: 0;
-  margin: 0;
-}
-
-.video-container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-color: #000000;
-  overflow: hidden;
-}
-
-.main-video {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  background-color: #000000;
-  display: block;
-}
-
-/* Video Section Responsive */
-@media (max-width: 768px) {
-  .video-section {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-  
-  .video-container {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .main-video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-section {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-  
-  .video-container {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .main-video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-}

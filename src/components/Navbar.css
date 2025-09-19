@@ -19,7 +19,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   max-width: 1600px;
   margin: 0 auto;
@@ -29,14 +29,12 @@
 }
 
 .navbar-left {
-  position: absolute;
-  left: -80px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   gap: 40px;
   align-items: center;
   padding-left: 0;
+  flex: 1;
+  justify-content: flex-start;
 }
 
 .navbar-center {
@@ -68,6 +66,11 @@
   padding: 16px 0;
   position: relative;
   text-transform: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-link:hover {
@@ -141,6 +144,10 @@
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hamburger-line {
@@ -148,8 +155,9 @@
   height: 2px;
   background: white;
   margin: 2px 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-origin: center;
+  border-radius: 1px;
 }
 
 .hamburger-line.active:nth-child(1) {
@@ -158,6 +166,7 @@
 
 .hamburger-line.active:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .hamburger-line.active:nth-child(3) {
@@ -170,13 +179,15 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(20px);
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu.open {
@@ -205,21 +216,233 @@
   text-align: left;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.mobile-nav-link:hover {
+.mobile-nav-link:hover,
+.mobile-nav-link:active,
+.mobile-nav-link:focus {
   color: #667eea;
   padding-left: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  outline: none;
 }
 
 .mobile-nav-link:last-child {
   border-bottom: none;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Ultra Wide Screens (2400px and up) */
+@media (min-width: 2400px) {
   .navbar-container {
-    padding: 0 30px;
+    max-width: 2200px;
+    padding: 0 120px;
+    height: 120px;
+  }
+  
+  .navbar-left {
+    gap: 60px;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 24px 0;
+  }
+  
+  .logo-image {
+    height: 100px;
+    max-width: 260px;
+  }
+  
+  .logo-text {
+    font-size: 42px;
+    letter-spacing: 5px;
+  }
+}
+
+/* Large Ultra Wide (2000px to 2399px) */
+@media (max-width: 2399px) and (min-width: 2000px) {
+  .navbar-container {
+    max-width: 2000px;
+    padding: 0 100px;
+    height: 110px;
+  }
+  
+  .navbar-left {
+    gap: 55px;
+  }
+  
+  .nav-link {
+    font-size: 17px;
+    letter-spacing: 0.9px;
+    padding: 22px 0;
+  }
+  
+  .logo-image {
+    height: 95px;
+    max-width: 240px;
+  }
+  
+  .logo-text {
+    font-size: 40px;
+    letter-spacing: 4.5px;
+  }
+}
+
+/* Ultra Wide (1800px to 1999px) */
+@media (max-width: 1999px) and (min-width: 1800px) {
+  .navbar-container {
+    max-width: 1800px;
+    padding: 0 90px;
+    height: 105px;
+  }
+  
+  .navbar-left {
+    gap: 50px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    padding: 20px 0;
+  }
+  
+  .logo-image {
+    height: 90px;
+    max-width: 220px;
+  }
+  
+  .logo-text {
+    font-size: 38px;
+    letter-spacing: 4px;
+  }
+}
+
+/* Large Desktop (1600px to 1799px) */
+@media (max-width: 1799px) and (min-width: 1600px) {
+  .navbar-container {
+    max-width: 1600px;
+    padding: 0 80px;
+    height: 100px;
+  }
+  
+  .navbar-left {
+    gap: 45px;
+  }
+  
+  .nav-link {
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    padding: 18px 0;
+  }
+  
+  .logo-image {
+    height: 85px;
+    max-width: 200px;
+  }
+  
+  .logo-text {
+    font-size: 36px;
+    letter-spacing: 3.5px;
+  }
+}
+
+/* Desktop (1400px to 1599px) */
+@media (max-width: 1599px) and (min-width: 1400px) {
+  .navbar-container {
+    max-width: 1400px;
+    padding: 0 70px;
+    height: 95px;
+  }
+  
+  .navbar-left {
+    gap: 40px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 16px 0;
+  }
+  
+  .logo-image {
+    height: 80px;
+    max-width: 180px;
+  }
+  
+  .logo-text {
+    font-size: 34px;
+    letter-spacing: 3px;
+  }
+}
+
+/* Large Laptop (1200px to 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .navbar-container {
+    max-width: 1200px;
+    padding: 0 60px;
+    height: 90px;
+  }
+  
+  .navbar-left {
+    gap: 35px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 15px 0;
+  }
+  
+  .logo-image {
+    height: 75px;
+    max-width: 160px;
+  }
+  
+  .logo-text {
+    font-size: 32px;
+    letter-spacing: 2.5px;
+  }
+}
+
+/* Laptop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .navbar-container {
+    max-width: 992px;
+    padding: 0 50px;
+    height: 85px;
+  }
+  
+  .navbar-left {
+    gap: 30px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    padding: 14px 0;
+  }
+  
+  .logo-image {
+    height: 70px;
+    max-width: 150px;
+  }
+  
+  .logo-text {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Tablet Large (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .navbar-container {
+    padding: 0 40px;
     height: 80px;
   }
   
@@ -229,42 +452,45 @@
   
   .mobile-menu-toggle {
     display: flex;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
   }
   
-  .nav-link {
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    padding: 12px 0;
+  .hamburger-line {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
   }
   
   .logo-image {
-    height: 55px;
-    max-width: 150px;
+    height: 65px;
+    max-width: 140px;
   }
   
   .logo-text {
-    font-size: 26px;
+    font-size: 28px;
     letter-spacing: 2px;
   }
   
-  .navbar-right {
-    gap: 20px;
+  .mobile-menu-content {
+    padding: 40px 30px;
+    gap: 25px;
   }
   
-  .icon-btn {
-    width: 22px;
-    height: 22px;
-  }
-  
-  .icon-btn svg {
-    width: 22px;
-    height: 22px;
+  .mobile-nav-link {
+    font-size: 20px;
+    padding: 18px 0;
   }
 }
 
-@media (max-width: 480px) {
+/* Tablet (600px to 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
   .navbar-container {
-    padding: 0 20px;
+    padding: 0 35px;
     height: 75px;
   }
   
@@ -274,35 +500,311 @@
   
   .mobile-menu-toggle {
     display: flex;
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
   }
   
-  .nav-link {
-    font-size: 13px;
-    letter-spacing: 0.2px;
-    padding: 10px 0;
+  .hamburger-line {
+    width: 22px;
+    height: 2.5px;
+    margin: 2.5px 0;
   }
   
   .logo-image {
-    height: 45px;
+    height: 60px;
+    max-width: 130px;
+  }
+  
+  .logo-text {
+    font-size: 26px;
+    letter-spacing: 1.8px;
+  }
+  
+  .mobile-menu-content {
+    padding: 35px 25px;
+    gap: 22px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 19px;
+    padding: 16px 0;
+  }
+}
+
+/* Mobile Large (480px to 599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+  .navbar-container {
+    padding: 0 30px;
+    height: 70px;
+  }
+  
+  .navbar-left {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+  }
+  
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+    margin: 2px 0;
+  }
+  
+  .logo-image {
+    height: 55px;
     max-width: 120px;
   }
   
   .logo-text {
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 1.5px;
   }
   
-  .navbar-right {
-    gap: 15px;
+  .mobile-menu-content {
+    padding: 30px 20px;
+    gap: 20px;
   }
   
-  .icon-btn {
-    width: 20px;
-    height: 20px;
+  .mobile-nav-link {
+    font-size: 18px;
+    padding: 15px 0;
+  }
+}
+
+/* Mobile Medium (400px to 479px) */
+@media (max-width: 479px) and (min-width: 400px) {
+  .navbar-container {
+    padding: 0 25px;
+    height: 65px;
   }
   
-  .icon-btn svg {
-    width: 20px;
-    height: 20px;
+  .navbar-left {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+  }
+  
+  .hamburger-line {
+    width: 18px;
+    height: 1.8px;
+    margin: 1.8px 0;
+  }
+  
+  .logo-image {
+    height: 50px;
+    max-width: 110px;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+  }
+  
+  .mobile-menu-content {
+    padding: 25px 18px;
+    gap: 18px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 17px;
+    padding: 14px 0;
+  }
+}
+
+/* Mobile Small (360px to 399px) */
+@media (max-width: 399px) and (min-width: 360px) {
+  .navbar-container {
+    padding: 0 20px;
+    height: 60px;
+  }
+  
+  .navbar-left {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+  }
+  
+  .hamburger-line {
+    width: 16px;
+    height: 1.5px;
+    margin: 1.5px 0;
+  }
+  
+  .logo-image {
+    height: 45px;
+    max-width: 100px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .mobile-menu-content {
+    padding: 22px 15px;
+    gap: 16px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 16px;
+    padding: 13px 0;
+  }
+}
+
+/* Extra Small Mobile (320px to 359px) */
+@media (max-width: 359px) and (min-width: 320px) {
+  .navbar-container {
+    padding: 0 18px;
+    height: 55px;
+  }
+  
+  .navbar-left {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+  }
+  
+  .hamburger-line {
+    width: 14px;
+    height: 1.2px;
+    margin: 1.2px 0;
+  }
+  
+  .logo-image {
+    height: 40px;
+    max-width: 90px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+  
+  .mobile-menu-content {
+    padding: 20px 12px;
+    gap: 14px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+
+/* Ultra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .navbar-container {
+    padding: 0 15px;
+    height: 50px;
+  }
+  
+  .mobile-menu-toggle {
+    right: 15px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .hamburger-line {
+    width: 12px;
+    height: 1px;
+    margin: 1px 0;
+  }
+  
+  .logo-image {
+    height: 35px;
+    max-width: 80px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  
+  .mobile-menu-content {
+    padding: 18px 10px;
+    gap: 12px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .navbar-container {
+    height: 50px;
+  }
+  
+  .logo-image {
+    height: 35px;
+    max-width: 80px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  
+  .mobile-menu-content {
+    padding: 15px 12px;
+    gap: 12px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar {
+    display: none;
   }
 }

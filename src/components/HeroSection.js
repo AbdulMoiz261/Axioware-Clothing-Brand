@@ -64,7 +64,7 @@ const HeroSection = () => {
                   <path d="M2 17L12 22L22 17"/>
                   <path d="M2 12L12 17L22 12"/>
                 </svg>
-                Try Web Demo
+                About Us
               </button>
               <button className="contact-btn">
                 Contact Us
@@ -72,27 +72,6 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="hero-cards">
-            <div className="card card-portrait card-top">
-              <div className="card-image" style={{backgroundImage: "url('/images/1.webp')"}}>
-              </div>
-            </div>
-            
-          <div className="card card-portrait card-left">
-              <div className="card-image" style={{backgroundImage: "url('/images/m4.webp')"}}>
-              </div>
-            </div>
-            
-            <div className="card card-portrait card-right">
-              <div className="card-image" style={{backgroundImage: "url('/images/3.webp')"}}>
-              </div>
-            </div>
-            
-            <div className="card card-portrait card-bottom">
-              <div className="card-image" style={{backgroundImage: "url('/images/4.webp')"}}>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -369,28 +348,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <section id="video" className="video-section">
-        <div className="video-container">
-          <video 
-            className="main-video"
-            preload="auto"
-            autoPlay
-            muted
-            loop
-            playsInline
-            onError={(e) => {
-              console.error('Video error:', e);
-              console.error('Video source:', e.target.src);
-            }}
-            onLoadStart={() => console.log('Video loading started')}
-            onCanPlay={() => console.log('Video can play')}
-            onLoadedData={() => console.log('Video data loaded')}
-          >
-            <source src="/video/video1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
     </>
   );
 };
