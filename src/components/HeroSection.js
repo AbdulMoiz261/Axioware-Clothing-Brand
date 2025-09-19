@@ -218,6 +218,31 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Virtual Try-On Section */}
+      <section className="virtual-tryon-section">
+        <div className="virtual-tryon-container">
+          <div className="virtual-tryon-content">
+            <div className="section-badge">AI Technology</div>
+            <h2 className="virtual-tryon-title">Experience Virtual Try-On</h2>
+            <p className="virtual-tryon-subtitle">
+              Upload your photo and try on any outfit virtually. Our advanced AI technology 
+              creates realistic virtual try-on experiences in seconds.
+            </p>
+            <button className="virtual-tryon-btn" onClick={() => window.location.href = '/virtual-tryon'}>
+              <svg className="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              Virtual Try-On
+            </button>
+          </div>
+          <div className="virtual-tryon-preview">
+            <div className="preview-image">
+              <img src="/images/generated-image.webp" alt="Virtual Try-On Preview" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Horizontal Scrolling Images Section */}
       <section className="horizontal-scroll-section">
         <div className="scroll-container">

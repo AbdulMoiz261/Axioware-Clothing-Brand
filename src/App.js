@@ -7,6 +7,7 @@ import WomenPage from './components/WomenPage';
 import MenPage from './components/MenPage';
 import MenProductDetail from './components/MenProductDetail';
 import WomenProductDetail from './components/WomenProductDetail';
+import VirtualTryOn from './components/VirtualTryOn';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
@@ -29,6 +30,13 @@ function AppContent() {
 
   const MenPageComponent = () => <MenPage />;
 
+  const VirtualTryOnPage = () => (
+    <div>
+      <VirtualTryOn />
+      <ContactUs />
+      <Footer />
+    </div>
+  );
 
   return (
     <div className="App">
@@ -37,6 +45,7 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/women" element={<WomenPage />} />
         <Route path="/men" element={<MenPageComponent />} />
+        <Route path="/virtual-tryon" element={<VirtualTryOnPage />} />
         <Route path="/product/men/:id" element={<MenProductDetail />} />
         <Route path="/product/women/:id" element={<WomenProductDetail />} />
       </Routes>

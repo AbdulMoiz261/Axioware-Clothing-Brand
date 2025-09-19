@@ -1,69 +1,23 @@
 .contact-section {
   padding: 120px 0;
-  background: 
-    linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%),
-    radial-gradient(circle at 20% 30%, rgba(0, 196, 204, 0.05) 0%, transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(10, 42, 67, 0.03) 0%, transparent 60%);
+  background: #ffffff;
   position: relative;
-  overflow: hidden;
 }
 
-.contact-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%230a2a43" fill-opacity="0.03"><circle cx="30" cy="30" r="1"/></g></svg>'),
-    linear-gradient(45deg, transparent 49%, rgba(0, 196, 204, 0.02) 50%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, rgba(10, 42, 67, 0.02) 50%, transparent 51%);
-  opacity: 0.8;
-  animation: backgroundShift 20s ease-in-out infinite;
-  pointer-events: none;
-}
 
-.contact-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(0, 196, 204, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 70% 70%, rgba(10, 42, 67, 0.03) 0%, transparent 40%);
-  opacity: 0.6;
-  animation: backgroundPulse 15s ease-in-out infinite;
-  pointer-events: none;
-}
 
-@keyframes backgroundShift {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(-10px) translateY(-5px); }
-  50% { transform: translateX(5px) translateY(-10px); }
-  75% { transform: translateX(-5px) translateY(5px); }
-}
-
-@keyframes backgroundPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 0.8; }
-}
 
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-  z-index: 1;
 }
 
 .contact-header {
   text-align: center;
   margin-bottom: 100px;
   position: relative;
-  z-index: 2;
 }
 
 .contact-title {
