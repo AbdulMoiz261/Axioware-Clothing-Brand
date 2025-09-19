@@ -94,84 +94,84 @@ const MenPage = () => {
       category: 'CAMBRIC | EMBROIDERED',
       items: 'RTW | KURTA',
       price: 'PKR 4,290',
-      image: '/images/men.webp'
+      image: '/images/m9.webp'
     },
     {
       id: 10,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
       price: 'PKR 2,890',
-      image: '/images/men.webp'
+      image: '/images/m10.webp'
     },
     {
       id: 11,
       category: 'LAWN | EMBROIDERED',
       items: 'RTW | KURTA',
       price: 'PKR 4,890',
-      image: '/images/men.webp'
+      image: '/images/m11.webp'
     },
     {
       id: 12,
       category: 'SILK | PRINTED',
       items: 'RTW | SHERWANI',
       price: 'PKR 9,990',
-      image: '/images/men.webp'
+      image: '/images/m12.jpg'
     },
     {
       id: 13,
       category: 'CAMBRIC | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
       price: 'PKR 3,190',
-      image: '/images/men.webp'
+      image: '/images/m13.webp'
     },
     {
       id: 14,
       category: 'LAWN | EMBROIDERED',
       items: 'RTW | KURTA',
       price: 'PKR 5,290',
-      image: '/images/men.webp'
+      image: '/images/m14.webp'
     },
     {
       id: 15,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT',
       price: 'PKR 2,390',
-      image: '/images/men.webp'
+      image: '/images/m1.webp'
     },
     {
       id: 16,
       category: 'SILK | EMBROIDERED',
       items: 'RTW | SHERWANI',
       price: 'PKR 11,990',
-      image: '/images/men.webp'
+      image: '/images/m16.webp'
     },
     {
       id: 17,
       category: 'LAWN | PRINTED',
       items: 'RTW | SHIRT & CULOTTE',
       price: 'PKR 3,290',
-      image: '/images/men.webp'
+      image: '/images/m17.webp'
     },
     {
       id: 18,
       category: 'CAMBRIC | EMBROIDERED',
       items: 'RTW | KURTA & TROUSER',
       price: 'PKR 6,890',
-      image: '/images/men.webp'
+      image: '/images/m18.webp'
     },
     {
       id: 19,
       category: 'COTTON | PRINTED',
       items: 'RTW | SHIRT & TROUSER',
       price: 'PKR 2,790',
-      image: '/images/men.webp'
+      image: '/images/m19.webp'
     },
     {
       id: 20,
       category: 'LAWN | EMBROIDERED',
       items: 'RTW | KURTA',
       price: 'PKR 4,590',
-      image: '/images/men.webp'
+      image: '/images/m20.webp'
     },
     {
       id: 21,

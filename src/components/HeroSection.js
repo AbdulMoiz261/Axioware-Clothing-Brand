@@ -239,6 +239,59 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Horizontal Scrolling Images Section */}
+      <section className="horizontal-scroll-section">
+        <div className="scroll-container">
+          <div className="scroll-track">
+            <div className="scroll-images">
+              <img src="/images/1.webp" alt="Fashion 1" className="scroll-image" />
+              <img src="/images/2.webp" alt="Fashion 2" className="scroll-image" />
+              <img src="/images/3.webp" alt="Fashion 3" className="scroll-image" />
+              <img src="/images/4.webp" alt="Fashion 4" className="scroll-image" />
+              <img src="/images/5.webp" alt="Fashion 5" className="scroll-image" />
+              <img src="/images/6.webp" alt="Fashion 6" className="scroll-image" />
+              <img src="/images/7.webp" alt="Fashion 7" className="scroll-image" />
+              <img src="/images/8.webp" alt="Fashion 8" className="scroll-image" />
+              <img src="/images/9.jpg" alt="Fashion 9" className="scroll-image" />
+              <img src="/images/10.webp" alt="Fashion 10" className="scroll-image" />
+              <img src="/images/11.jpg" alt="Fashion 11" className="scroll-image" />
+              <img src="/images/12.jpg" alt="Fashion 12" className="scroll-image" />
+              <img src="/images/13.jpg" alt="Fashion 13" className="scroll-image" />
+              <img src="/images/14.webp" alt="Fashion 14" className="scroll-image" />
+              <img src="/images/15.webp" alt="Fashion 15" className="scroll-image" />
+              <img src="/images/16.webp" alt="Fashion 16" className="scroll-image" />
+              <img src="/images/17.webp" alt="Fashion 17" className="scroll-image" />
+              <img src="/images/18.jpg" alt="Fashion 18" className="scroll-image" />
+              <img src="/images/19.webp" alt="Fashion 19" className="scroll-image" />
+              <img src="/images/20.webp" alt="Fashion 20" className="scroll-image" />
+            </div>
+            {/* Duplicate set for seamless loop */}
+            <div className="scroll-images">
+              <img src="/images/1.webp" alt="Fashion 1" className="scroll-image" />
+              <img src="/images/2.webp" alt="Fashion 2" className="scroll-image" />
+              <img src="/images/3.webp" alt="Fashion 3" className="scroll-image" />
+              <img src="/images/4.webp" alt="Fashion 4" className="scroll-image" />
+              <img src="/images/5.webp" alt="Fashion 5" className="scroll-image" />
+              <img src="/images/6.webp" alt="Fashion 6" className="scroll-image" />
+              <img src="/images/7.webp" alt="Fashion 7" className="scroll-image" />
+              <img src="/images/8.webp" alt="Fashion 8" className="scroll-image" />
+              <img src="/images/9.jpg" alt="Fashion 9" className="scroll-image" />
+              <img src="/images/10.webp" alt="Fashion 10" className="scroll-image" />
+              <img src="/images/11.jpg" alt="Fashion 11" className="scroll-image" />
+              <img src="/images/12.jpg" alt="Fashion 12" className="scroll-image" />
+              <img src="/images/13.jpg" alt="Fashion 13" className="scroll-image" />
+              <img src="/images/14.webp" alt="Fashion 14" className="scroll-image" />
+              <img src="/images/15.webp" alt="Fashion 15" className="scroll-image" />
+              <img src="/images/16.webp" alt="Fashion 16" className="scroll-image" />
+              <img src="/images/17.webp" alt="Fashion 17" className="scroll-image" />
+              <img src="/images/18.jpg" alt="Fashion 18" className="scroll-image" />
+              <img src="/images/19.webp" alt="Fashion 19" className="scroll-image" />
+              <img src="/images/20.webp" alt="Fashion 20" className="scroll-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="video" className="video-section">
         <div className="video-container">
           <video 
