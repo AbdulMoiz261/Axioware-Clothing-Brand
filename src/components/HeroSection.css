@@ -1170,17 +1170,10 @@
 
 .scroll-track {
   display: flex;
-  animation: scroll-horizontal 30s linear infinite;
-  height: 100%;
-  align-items: center;
-}
-
-.scroll-images {
-  display: flex;
   gap: 20px;
+  animation: scroll-horizontal 56s linear infinite;
   height: 100%;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .scroll-image {
@@ -1205,14 +1198,11 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% - 20px));
   }
 }
 
-/* Pause animation on hover */
-.horizontal-scroll-section:hover .scroll-track {
-  animation-play-state: paused;
-}
+/* Animation continues on hover - no pause */
 
 /* Responsive Design for Horizontal Scroll */
 @media (max-width: 768px) {
@@ -1241,6 +1231,91 @@
   }
   
   .scroll-images {
+    gap: 12px;
+  }
+}
+
+/* Men's Horizontal Scrolling Images Section */
+.mens-scroll-section {
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.mens-scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mens-scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: mens-scroll-horizontal 56s linear infinite;
+  height: 100%;
+  align-items: center;
+}
+
+.mens-scroll-image {
+  width: 400px;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.mens-scroll-image:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes mens-scroll-horizontal {
+  0% {
+    transform: translateX(calc(-100% - 20px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design for Men's Scroll */
+@media (max-width: 768px) {
+  .mens-scroll-section {
+    height: 100vh;
+  }
+  
+  .mens-scroll-image {
+    width: 350px;
+    height: 60vh;
+  }
+  
+  .mens-scroll-track {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mens-scroll-section {
+    height: 100vh;
+  }
+  
+  .mens-scroll-image {
+    width: 300px;
+    height: 50vh;
+  }
+  
+  .mens-scroll-track {
     gap: 12px;
   }
 }
