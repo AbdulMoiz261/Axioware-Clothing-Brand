@@ -201,29 +201,12 @@ const MenPage = () => {
         </div>
         
         <div className="category-wrapper">
-          <div className="category-grid-left">
-            {categories.slice(0, 2).map((category) => (
-              <div key={category.id} className="category-item">
-                <div className="category-button">
-                  <img src={category.image} alt={category.name} />
-                </div>
-                <div className="category-label">{category.name}</div>
-              </div>
-            ))}
-          </div>
-          
-          <h1 className="category-title">MEN</h1>
-          
-          <div className="category-grid-right">
-            {categories.slice(2, 4).map((category) => (
-              <div key={category.id} className="category-item">
-                <div className="category-button">
-                  <img src={category.image} alt={category.name} />
-                </div>
-                <div className="category-label">{category.name}</div>
-              </div>
-            ))}
-          </div>
+          <h1 className="category-title">MENS COLLECTION</h1>
+          <p className="category-description">
+            Discover our premium collection of traditional and contemporary menswear. 
+            From elegant kurtas and sherwanis to modern shirts and trousers, we offer 
+            the perfect blend of style, comfort, and craftsmanship for every occasion.
+          </p>
         </div>
       </div>
 
